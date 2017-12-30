@@ -12,4 +12,9 @@ class TeamsController extends Controller
         $teams = Team::all();
         return view('teams.index', compact(['teams']));
     }
+    public function show($id) {
+        $team = Team::find($id);
+        return view('teams.show', compact(['team']));
+
+    }
 }

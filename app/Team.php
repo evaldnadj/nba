@@ -12,5 +12,8 @@ class Team extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function players () {
+        return $this->hasMany('App\Player');
+    }
 
 }
